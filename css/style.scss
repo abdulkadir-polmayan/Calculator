@@ -1,0 +1,322 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: poppins;
+    font-weight: 400;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s linear;
+    background-color: rgb(189, 183, 183);
+    
+    
+
+    
+    button{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .main {
+
+
+        .nightMode{
+            margin-top: 3%;
+            margin-bottom: 3%;
+            input{
+                display: none;
+            }
+            label{
+                // width: 10px;
+                // height: 20px;
+                // background-color: black;
+                .box{
+                    margin: 0 auto;
+                    width: 64px;
+                    height: 34px;
+                    background-color: rgb(82, 82, 82);
+                    border-radius: 200px;
+                    padding: 5px;
+                    box-shadow: -4px 4px 4px  rgb(43, 43, 43) , 4px -4px 4px rgba(255, 255, 255, 0.253);
+
+                    transition: 0.2s linear;
+
+                    .ball{
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        background-color: rgb(255, 255, 255);
+                        transition: 0.2s linear;
+                    }
+                }
+
+                
+            }
+            #chk:checked+ .label .box {
+                background-color: rgb(177, 177, 177);
+                .ball{
+                    background-color: rgb(61, 61, 61);
+                    transform: translateX(30px);
+                }
+            }
+            
+        }
+
+
+        .calculator{
+
+            justify-content: center;
+            display: grid;
+            align-content: center;
+
+            .view{
+
+                grid-column: 1/-1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+                flex-direction: column ;
+                word-wrap: break-word;
+                word-break: break-all;
+                background-color: #b9c9f33f;
+                backdrop-filter: blur(0.2rem);
+                margin-bottom: 5px;
+                height: 128px;
+                border-radius: 43px;
+                padding: 0px 30px;
+                box-shadow: rgba(78, 78, 78, 0.521) -5px 5px 20px 1px , rgba(255, 255, 255, 0.438)  5px -5px 5px 2px;
+                
+
+                h2 , h1 {
+                    margin: 0;
+                    font-weight: 600;
+                    // text-overflow: ellipsis;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                }
+
+                h1 {
+                    border-bottom: #a5a5a5 2px solid;
+                }
+
+                
+
+            }
+            
+            .button{
+
+                box-shadow: inset -4px 4px 4px  rgb(43, 43, 43) ,inset 4px -4px 4px rgba(255, 255, 255, 0.253);
+                justify-content: center;
+                display: grid;
+                align-content: center;
+                grid-template-columns: repeat(4,67px);
+                grid-template-rows:minmax(65px ,auto) repeat(4,67px);
+                background-color: #333333cc;
+                backdrop-filter: blur(0.2rem);
+                
+                padding: 15px;
+                border-radius: 50px;
+                svg{
+                    filter: drop-shadow(-4px 4px 4px #000 );
+                }
+
+                
+                .clean {
+                    background-color: #FFF9B0;
+                    grid-column: span 2;
+                    width: 128px;
+                }
+                button:active{
+                    box-shadow: -4px 4px 4px  rgba(43, 43, 43, 0) , inset 4px 4px 4px rgba(255, 255, 255, 0.329);
+
+                }
+
+
+                .operator {
+                    background-color: #FF7171;
+                }
+
+                .sü{
+                    display: flex;
+
+                }
+                
+                div{
+                    z-index: -1;
+                    span{
+                        font-size: 2rem;
+                        z-index: 2;
+                        position: absolute;
+                        font-weight: 600;
+                        transform: translateX(0.7rem) translateY(3.8rem);
+                    }
+                    .equal{
+                        transform: translateX(-58px) translateY(15px);
+    
+                        }
+                }
+                
+                
+
+            }
+
+            .but {
+
+                cursor: pointer;
+                border: none;
+                border-radius: 29px;
+                background-color: #7868E6;
+                width: 60px;
+                height: 60px;
+                box-shadow: inset -4px 4px 4px rgba(255, 255, 255, 0.329);
+
+
+
+            }
+            button {
+
+                cursor: pointer;
+                border: none;
+                border-radius: 29px;
+                background-color: #7868E6;
+                width: 60px;
+                height: 60px;
+                box-shadow: -4px 4px 4px  rgb(43, 43, 43) , 4px -4px 4px rgba(255, 255, 255, 0.253);
+                transition: 0.2s ease-out;
+
+
+            }
+
+        }
+
+    }
+
+}
+
+.dark{
+    background-color: rgb(41, 41, 41);
+}
+
+.darkText{
+    color: #fff;
+}
+
+.social{
+    text-align: center;
+    margin-top: 3vw;
+    button{
+
+        border-radius: 30px;
+        height: 40px;
+        width: 80px;
+
+    }
+}
+
+
+.socialMain{
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .socialBg{
+        opacity: 0;
+        width: 390px;
+        border-radius: 50px;
+        height: 540px;
+        background-color: rgba(184, 184, 184, 0.616);
+        backdrop-filter: blur(0.2rem);
+        box-shadow: rgba(54, 46, 46, 0.521) -5px 5px 20px 1px , rgba(255, 255, 255, 0.438)  5px -5px 5px 2px;
+        padding: 3rem;
+        
+        
+        a{
+            text-decoration: none;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            vertical-align: middle;  
+            text-align: center;
+            .fa-linkedin{
+                color: #0A66C2;
+                display:inline-block;
+                margin-left: 3rem;
+                margin-bottom: 1rem;
+                filter: drop-shadow(4px -4px 4px rgb(255, 255, 255)) drop-shadow(4px -4px 4px rgb(190, 190, 190));
+                
+            }
+            span{
+                color: black;
+                font-family: poppins;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            
+            .fa-github{
+                margin-top: 2rem;
+                color: white;
+                display:inline-block;
+                margin-left: 3rem;
+                margin-bottom: 1rem;
+                span{
+                    color: black;
+                    font-family: poppins;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                
+                
+                
+            }
+        }
+    }
+    
+    
+}
+
+
+
+.openScMenu{
+    z-index: 99;
+}
+
+.opa{
+    opacity: 10;
+}
+
+
+// .schk{
+//     position: absolute;
+//     z-index: 99999;
+//     width: 100px;
+//     height: 100px;
+//     background-color: yellow;
+//     div{
+//         z-index: 9999999;
+//         width: 100px;
+//         height: 100px;
+//         background-color: yellow;
+//     }
+// }
+
+
+/** 
+*! ı couldnt set toggle the social area 
+
+#schk:checked+ .socialMain{
+    .socialBg{
+
+        opacity: 0;
+    }
+    background-color: yellow;
+}
+
+*/
